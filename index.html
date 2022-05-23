@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- create header with connect button -->
+    <header class="SiteHeader">
+        <div class="HeaderContainer">
+            <h1 id="pageTitle">Composable Data Demo</h1>
+        </div>
+        <div class="HeaderContainer">
+            <button id="walletBtn"></button>
+        </div>
+
+    </header>
+    <div class="MyCont">
+        <div class="DataBlocks">
+            <div class="DataBlock">
+                <div id="basicProfile">
+                    <div class="BodyContainer">
+                        <h2>Basic Profile</h1>
+                            <p>Read from Ceramic Datamodel</p>
+                            <br>
+                            <h3 id="profileName"></h3>
+                            <h3 id="profileGender"></h3>
+                            <h3 id="profileCountry"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="DataBlock">
+                <div id="addressBook">
+                    <div class="BodyContainer">
+                        <h2>Address Book</h1>
+                            <p>Read from Ceramic Datamodel</p>
+                            <br>
+                            <div id="addressBookList">
+                                <ul id="contacts">
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="AddressForm">
+            <div class="BodyContainer">
+                <h2>Update Ceramic Datamodel</h2>
+                <br>
+                <form id="addressform">
+                    <div class="formfield">
+                        <label class="formLabel" for="contactName">Contact Name:</label>
+                        <input class="forminput" type="text" id="contactName" placeholder="John Doe">
+                    </div>
+                    <div class="formfield">
+                        <label class="formLabel" for="walletAddress">Wallet Address:</label>
+                        <input class="forminput" type="text" id="walletAddress" placeholder="0x123456 ">
+                    </div>
+                    <div class="formfield">
+                        <label class="formLabel" for="network">Blockchain Network:</label>
+                        <select class="forminput" id="network">
+                            <option value="Ethereum Mainnet">Ethereum Mainnet</option>
+                            <option value="Ethereum Ropsten">EthereumRopsten</option>
+                            <option value="Solana Mainnet">Solana Mainnet</option>
+                            <option value="Polygon Mainnet">Polygon Mainnet</option>
+                        </select>
+                    </div>
+                    <div class="formfield">
+                        <input class="forminput" type="submit" id="submitBtn">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- <button id="setBasicProf">Set Profile</button>
+    <button id="getBasicProf">Get Profile</button> -->
+    <script src="dist/bundle.js" type="module"></script>
+</body>
+
+</html>
